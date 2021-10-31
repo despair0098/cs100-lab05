@@ -13,7 +13,7 @@ class Rand: public Base{
 	public:
 		Op() : value(rand() % 100) {}
 		double evaluate(){ return value; }
-		string stringify(){ return "(" + value +  ")"; }
+		string stringify(){ return "(" + to_string(value) + ")"; }
 };
 
 #endif

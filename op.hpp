@@ -9,11 +9,10 @@ using namespace std;
 class Op : public Base { 
     private:
 	double value;
-	Base* string;
     public:
-        Op(double value) : Base(value) { }
+        Op(double value) : Base() { }
         virtual double evaluate() { return value; }
-        virtual std::string stringify() { return "(" + value  + ")"; }
+        virtual std::string stringify() { return "(" + to_string(value) + ")"; }
 };
 
 #endif //__OP_HPP__
