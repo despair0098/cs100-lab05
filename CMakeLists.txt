@@ -7,6 +7,11 @@ ADD_SUBDIRECTORY(googletest)
 ADD_EXECUTABLE(test
     MockClasses.hpp
     unit_test.cpp
+    Sub.hpp
+    Add.hpp
+    Mult.hpp
+    Div.hpp
+    Pow.hpp
 )
 
 TARGET_LINK_LIBRARIES(test gtest)
