@@ -1,5 +1,5 @@
-#ifndef MULT_HPP
-#define MULT_HPP
+#ifndef MOCKCLASSES_HPP
+#define MOCKCLASSES_HPP
 
 
 #include "base.hpp"
@@ -7,21 +7,33 @@
 
 using namespace std;
 
-class NegativeMult: public Base{
+class NegativeOp: public Base{
 	public:
-		NegativeMult(){	 
-			 
-		}
-		virtual double evaluate() {return -1 * 90;}
-		virtual string stringify() {return "(" + "-1" + "*" + "90" + ")";}
+		NegativeOp(){}
+		virtual double evaluate() {return -7.0;}
+		virtual string stringify() {return "-7.0";}
 };
 
-class ZeroMult: public Base {
+class ZeroOp: public Base{
 	public:
-		ZeroMult(){}
-		virtual double evaluate() {return 0 * 45;}
-		virtual string stringify() {return "(" + "0" + "*" +  "45" + ")";}
+		ZeroOp(){}
+		virtual double evaluate() {return 0.0;}
+		virtual string stringify() {return "0.0";}
 
+};
+
+class PositiveOp: public Base{
+	public:
+		PositiveOp(){}
+		virtual double evaluate() {return 5.5;}
+		virtual string stringify() {return "5.5";}
+};
+
+class PositiveOp2: public Base{
+	public:
+		PositiveOp2(){}
+		virtual double evaluate() {return 4.0;}
+		virtual string stringify() {return "4.0";}
 };
 
 #endif
