@@ -13,9 +13,9 @@ class Sub: public Base{
 		Base* left;
 		Base* right;
 	public:
-		Sub(Base* a, Base* b){value = a.evaluate() - b.evaluate(); this->left = a; this->right = b;}
+		Sub(Base* a, Base* b){value = a->evaluate() - b->evaluate(); this->left = a; this->right = b;}
 		virtual double evaluate() {return value;}
-		virtual string stringify() {return "(" + left.stringify() + "-" +  right.stringify() + ")";}
+		virtual string stringify() {return "(" + left->stringify() + "-" +  right->stringify() + ")";}
 };
 
 #endif
