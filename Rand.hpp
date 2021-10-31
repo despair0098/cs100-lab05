@@ -11,9 +11,9 @@ class Rand: public Base{
 	private:
 		double value;;
 	public:
-		op() : value(rand() % 100) {}
+		Op() : value(rand() % 100) {}
 		double evaluate(){ return value; }
-		string stringify(){ return to_string(value); }
+		string stringify(){ return "(" + value +  ")"; }
 };
 
 #endif
