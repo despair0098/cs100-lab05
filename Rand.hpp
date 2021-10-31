@@ -9,7 +9,7 @@ using namespace std;
 class Rand: public Base{
 
 	private:
-		double value;;
+		double value;
 	public:
 		Op() : value(rand() % 100) {}
 		double evaluate(){ return value; }
