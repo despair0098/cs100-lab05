@@ -8,6 +8,13 @@
 #include "Pow.hpp"
 #include "MockClasses.hpp"
 
+
+TEST(Rand1, RandNumber) {
+	Op* test = new Op(rand() % 100);
+	EXPECT_EQ(test->evaluate(), rand() % 100);
+}
+
+=======
 TEST(Mult1, OpNegativeAndPositive) {
     Base* test1 = new NegativeOp();
     Base* test2 = new PositiveOp();
@@ -111,6 +118,7 @@ TEST(Pow3, OpNegAndPos2) {
     EXPECT_EQ(pow->evaluate(), 2401);
     EXPECT_EQ(pow->stringify(), "(-7.0**4.0)");
 }
+
 int main(int argc, char **argv) {
   ::testing::InitGoogleTest(&argc, argv);
   return RUN_ALL_TESTS();
