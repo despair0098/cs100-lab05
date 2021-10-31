@@ -24,7 +24,7 @@ class Div: public Base{
 		}
 		virtual double evaluate() {return value;}
 		virtual string stringify() {
-			if(left->evaluate() == 0){
+			if(right->evaluate() == 0){
 				return "Undefined";
 			}
 			return "(" + left->stringify() + "/" +  right->stringify() + ")";

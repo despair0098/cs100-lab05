@@ -29,4 +29,11 @@ class PositiveOp: public Base{
 		virtual string stringify() {return "5.5";}
 };
 
+class PositiveOp2: public Base{
+	public:
+		PositiveOp2(){}
+		virtual double evaluate() {return 4.0;}
+		virtual string stringify() {return "4.0";}
+};
+
 #endif
