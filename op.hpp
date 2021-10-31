@@ -10,7 +10,8 @@ class Op : public Base {
     private:
 	double value;
     public:
-        Op(double value) : Base() { }
+	Op() : value(0) {}
+        Op(double n) : value(n) {}
         virtual double evaluate() { return value; }
         virtual std::string stringify() { return "(" + to_string(value) + ")"; }
 };
