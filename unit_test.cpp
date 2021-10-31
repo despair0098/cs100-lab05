@@ -8,13 +8,6 @@
 #include "Pow.hpp"
 #include "MockClasses.hpp"
 
-
-TEST(Rand1, RandNumber) {
-	Op* test = new Op(rand() % 100);
-	EXPECT_EQ(test->evaluate(), rand() % 100);
-}
-
-=======
 TEST(Mult1, OpNegativeAndPositive) {
     Base* test1 = new NegativeOp();
     Base* test2 = new PositiveOp();
@@ -117,6 +110,23 @@ TEST(Pow3, OpNegAndPos2) {
     Base* pow = new Pow(test1, test2);    
     EXPECT_EQ(pow->evaluate(), 2401);
     EXPECT_EQ(pow->stringify(), "(-7.0**4.0)");
+}
+
+TEST(CombinedTests, Combined) {
+    Op* test1 = new Op(1);
+    Op* test2 = new Op(2);
+    Op* test3 = new Op(3);
+    Op* test4 = new Op(4);
+    Op* test5 = new Op(5);
+
+    Base* pow = new Pow(test1, test2); 
+    Base* div = new Div(test4, test2);
+    Base* add = new Add(test5, pow);
+    Base* sub = new Sub(add, test3);
+    Base* mult = new Mult(sub, div); 
+	
+    EXPECT_EQ(add->evaluate(), 6.0 );
+    EXPECT_EQ(add->stringify(), "((5.000000)+((1.000000)**(2.000000)))");
 }
 
 int main(int argc, char **argv) {
