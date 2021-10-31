@@ -2,12 +2,16 @@
 #define __OP_HPP__
 
 #include "base.hpp"
+#include <strng>
 
-class Op : public Base {
+class Op : public Base { 
+    private:
+	double value;
     public:
-        Op(double value) : Base() { }
-        virtual double evaluate() { return 0.0; }
-        virtual std::string stringify() { return ""; }
+	op() : number(0) {}
+        Op(double value) : Base(value) { }
+        virtual double evaluate() { return value; }
+        virtual std::string stringify() { return to_string(value); }
 };
 
 #endif //__OP_HPP__
