@@ -13,7 +13,7 @@ class Op : public Base {
     public:
         Op(double value) : Base(value) { }
         virtual double evaluate() { return value; }
-        virtual std::string stringify() { return "(" + toString(value)  + ")"; }
+        virtual std::string stringify() { return "(" + value  + ")"; }
 };
 
 #endif //__OP_HPP__
